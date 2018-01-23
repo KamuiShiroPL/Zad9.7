@@ -139,12 +139,10 @@ function setGamePoints() {
 function checkWinner() {
 
   if (player.score == 2) {
-    return player.name
     alert("Player wins");
   }
 
   else if (computer.score == 2) {
-    return computer
     alert("Computer wins")
   }
 }

@@ -126,7 +126,7 @@ function checkRoundWinner(playerPick, computerPick) {
           computer.score++;
     }
 setGamePoints();
-
+checkWinner();
 }
 
 
@@ -135,16 +135,18 @@ function setGamePoints() {
     computerPointsElem.innerHTML = computer.score;
 }
 
-//Nie dziala ↓↓↓
+
 function checkWinner() {
 
-  if (player.score == 2) {
+  if (player.score == 10) {
     alert("Player wins");
+    gameState = "ended";
+    setGameElements()
   }
 
-  else if (computer.score == 2) {
+  else if (computer.score == 10) {
     alert("Computer wins")
+    gameState = "ended";
+    setGameElements()
   }
 }
-
-//Nie dziala ↑↑↑
